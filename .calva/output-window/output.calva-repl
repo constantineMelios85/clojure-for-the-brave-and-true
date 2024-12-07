@@ -1,0 +1,2368 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: pushd c:\Users\costa\repos\clojure-for-the-brave-and-true & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.1.1"] -- update-in :plugins conj [cider/cider-nrepl,"0.47.1"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:54331 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+; Jack-in done.
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hobbit-violence.core/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:51:1).
+; No such var: hobbit-violence.core/-main
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require 'hobbit-violence.core)
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hobbit-violence.core/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:58:1).
+; No such var: hobbit-violence.core/-main
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hobbit-violence.core/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:62:1).
+; No such var: hobbit-violence.core/-main
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require 'hobbit-violence.core)
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hobbit-violence.core/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:69:1).
+; No such var: hobbit-violence.core/-main
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require '[hobbit-violence.core :as hv])
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(ns-publics 'hobbit-violence.core)
+{}
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require '[clojure.tools.namespace.repl :refer [refresh]])
+(refresh)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:80:1).
+; Unable to resolve symbol: refresh in this context
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(ns-publics 'hobbit-violence.core)
+{}
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(in-ns 'hobbit-violence.core)
+#namespace[hobbit-violence.core]
+clj꞉hobbit-violence.core꞉> 
+; Syntax error reading source at (REPL:88:33).
+; No reader function for tag namespace
+clj꞉hobbit-violence.core꞉> 
+(ns-publics 'hobbit-violence.core)
+{}
+clj꞉hobbit-violence.core꞉> 
+(in-ns 'hobbit-violence.core)
+#namespace[hobbit-violence.core]
+clj꞉hobbit-violence.core꞉> 
+(-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:99:1).
+; Unable to resolve symbol: -main in this context
+clj꞉hobbit-violence.core꞉> 
+(require '[hobbit-violence.core :as hv])
+nil
+clj꞉hobbit-violence.core꞉> 
+(hv/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:106:1).
+; No such var: hv/-main
+clj꞉hobbit-violence.core꞉> 
+run
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:1:8553).
+; Unable to resolve symbol: run in this context
+clj꞉hobbit-violence.core꞉> 
+(asym-hobbit)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:114:1).
+; Unable to resolve symbol: asym-hobbit in this context
+clj꞉hobbit-violence.core꞉> 
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: pushd c:\Users\costa\repos\clojure-for-the-brave-and-true & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.1.1"] -- update-in :plugins conj [cider/cider-nrepl,"0.47.1"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:55025 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+; Jack-in done.
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:136:1).
+; Unable to resolve symbol: -main in this context
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require '[hobbit-violence.core :as hv])
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hv/-main)
+; Hello, World!
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hv/-main)
+; Hello, World!
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hv/-main)
+; Hello, World!
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(hv/-main)
+; Hello, World!
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(refresh)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:159:1).
+; Unable to resolve symbol: refresh in this context
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/costa/repos/clojure-for-the-brave-and-true/.nrepl-port ...
+; Using host:port localhost:55025 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(in-ns 'hobbit-violence.core)
+#namespace[hobbit-violence.core]
+clj꞉hobbit-violence.core꞉> 
+(-main)
+; Hello, World!
+nil
+clj꞉hobbit-violence.core꞉> 
+(-main)
+; Hello, World!
+nil
+clj꞉hobbit-violence.core꞉> 
+(-main)
+; Hello, World!
+nil
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Hello, Hobbit!
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/asym-hobbit-body-parts)
+; Execution error (ArityException) at hobbit-violence.core/eval10616 (form-init16136123255644386662.clj:198).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉hobbit-violence.core꞉> 
+(println (hobbit-violence.core/asym-hobbit-body-parts))
+; Execution error (ArityException) at hobbit-violence.core/eval10618 (form-init16136123255644386662.clj:202).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉hobbit-violence.core꞉> 
+(println asym-hobbit-body-parts)
+; [{:name head, :size 3} {:name left-eye, :size 1} {:name left-ear, :size 1} {:name mouth, :size 1} {:name nose, :size 1} {:name neck, :size 2} {:name left-shoulder, :size 3} {:name left-upper-arm, :size 3} {:name chest, :size 10} {:name back, :size 10} {:name left-forearm, :size 3} {:name abdomen, :size 6} {:name left-kidney, :size 1} {:name left-hand, :size 2} {:name left-knee, :size 2} {:name left-thigh, :size 4} {:name left-lower-leg, :size 3} {:name left-achilles, :size 1} {:name left-foot, :size 2}]
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:210:1).
+; No such var: hobbit-violence.core/matching-part
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+(matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:217:1).
+; Unable to resolve symbol: matching-part in this context
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:221:1).
+; No such var: hobbit-violence.core/matching-part
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+(matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:228:1).
+; Unable to resolve symbol: matching-part in this context
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:232:1).
+; No such var: hobbit-violence.core/matching-part
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:236:1).
+; No such var: hobbit-violence.core/matching-part
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:240:1).
+; No such var: hobbit-violence.core/matching-part
+clj꞉hobbit-violence.core꞉> 
+(matching-part {:name "left-hand" :size 3})
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:244:1).
+; Unable to resolve symbol: matching-part in this context
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+(matching-part {:name "left-hand" :size 3})
+{:name "right-hand", :size 3}
+clj꞉hobbit-violence.core꞉> 
+(refresh)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:257:1).
+; Unable to resolve symbol: refresh in this context
+clj꞉hobbit-violence.core꞉> 
+(require '[clojure.tools.namespace.repl :refer [refresh]])
+(refresh)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:262:1).
+; Unable to resolve symbol: refresh in this context
+clj꞉hobbit-violence.core꞉> 
+(require '[clojure.tools.namespace.repl :refer [refresh]])
+; Execution error (FileNotFoundException) at hobbit-violence.core/eval10688 (form-init16136123255644386662.clj:266).
+; Could not locate clojure/tools/namespace/repl__init.class, clojure/tools/namespace/repl.clj or clojure/tools/namespace/repl.cljc on classpath.
+clj꞉hobbit-violence.core꞉> 
+(require '[clojure.tools.namespace.repl :refer [refresh]])
+; Execution error (FileNotFoundException) at hobbit-violence.core/eval10690 (form-init16136123255644386662.clj:270).
+; Could not locate clojure/tools/namespace/repl__init.class, clojure/tools/namespace/repl.clj or clojure/tools/namespace/repl.cljc on classpath.
+clj꞉hobbit-violence.core꞉> 
+(-main)
+; Hello, Hobbit!
+nil
+clj꞉hobbit-violence.core꞉> 
+(require '[clojure.tools.namespace.repl :refer [refresh]])
+; Execution error (FileNotFoundException) at hobbit-violence.core/eval10694 (form-init16136123255644386662.clj:278).
+; Could not locate clojure/tools/namespace/repl__init.class, clojure/tools/namespace/repl.clj or clojure/tools/namespace/repl.cljc on classpath.
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Hello
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Hello
+nil
+clj꞉hobbit-violence.core꞉> 
+calva.refresh
+; Syntax error (ClassNotFoundException) compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:1:8554).
+; calva.refresh
+clj꞉hobbit-violence.core꞉> 
+(calva.refresh)
+; Syntax error (ClassNotFoundException) compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:297:1).
+; calva.refresh
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Hello
+nil
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Hello, more
+nil
+clj꞉hobbit-violence.core꞉> 
+nil
+clj꞉hobbit-violence.core꞉> 
+nil
+clj꞉hobbit-violence.core꞉> 
+(require 'user)
+; Execution error (FileNotFoundException) at hobbit-violence.core/eval10745 (form-init16136123255644386662.clj:316).
+; Could not locate user__init.class, user.clj or user.cljc on classpath.
+clj꞉hobbit-violence.core꞉> 
+; TypeError: Cannot read properties of undefined (reading 'label')
+; Aborting connect.
+; TypeError: Cannot read properties of undefined (reading 'label')
+; Aborting connect.
+; TypeError: Cannot read properties of undefined (reading 'label')
+; Aborting connect.
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/costa/repos/clojure-for-the-brave-and-true/.nrepl-port ...
+; Using host:port localhost:55025 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require 'user)
+; Execution error (FileNotFoundException) at clojure-for-the-brave-and-true.core/eval10750 (form-init16136123255644386662.clj:339).
+; Could not locate user__init.class, user.clj or user.cljc on classpath.
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require 'dev.user)
+; Execution error (FileNotFoundException) at dev.user/eval10756$loading (user.clj:1).
+; Could not locate clojure/tools/namespace/repl__init.class, clojure/tools/namespace/repl.clj or clojure/tools/namespace/repl.cljc on classpath.
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/costa/repos/clojure-for-the-brave-and-true/.nrepl-port ...
+; Using host:port localhost:55025 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+(require 'user)
+; Execution error (FileNotFoundException) at clojure-for-the-brave-and-true.core/eval10763 (form-init16136123255644386662.clj:360).
+; Could not locate user__init.class, user.clj or user.cljc on classpath.
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/costa/repos/clojure-for-the-brave-and-true/.nrepl-port ...
+; Using host:port localhost:55025 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-for-the-brave-and-true.core꞉> 
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: pushd c:\Users\costa\repos\clojure-for-the-brave-and-true & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.1.1"] -- update-in :plugins conj [cider/cider-nrepl,"0.47.1"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:59710 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+(ns-in hobbit-violence.core)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:395:1).
+; Unable to resolve symbol: ns-in in this context
+clj꞉user꞉> 
+(ns hobbit-violence.core)
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:402:1).
+; No such var: hobbit-violence.core/-main
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core)
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:409:1).
+; No such var: hobbit-violence.core/-main
+clj꞉hobbit-violence.core꞉> 
+(require 'hobbit-violence.core)
+nil
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+; Syntax error compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:416:1).
+; No such var: hobbit-violence.core/-main
+clj꞉hobbit-violence.core꞉> 
+; :reloading (clojure-for-the-brave-and-true.core clojure-for-the-brave-and-true.core-test user hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at cl:reloading ()
+; ojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHe
+(clj꞉hobbit-violence.core꞉>)
+; Syntax error (ClassNotFoundException) compiling at (c:\Users\costa\repos\clojure-for-the-brave-and-true\.calva\output-window\output.calva-repl:457:1).
+; clj꞉hobbit-violence.core꞉>
+(hobbit-violence.core/-main)
+Hello, more
+nil
+clj꞉hobbit-violence.core꞉> 
+; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToH:reloading ()
+; :reloading ()
+; elper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.Res
+(hobbit-violence.core/-main)
+Hello, more AND MORE hobbits!
+nil
+clj꞉hobbit-violence.core꞉> 
+(matching-part {:name "left-hand" :size 3})
+{:name "right-hand", :size 3}
+clj꞉hobbit-violence.core꞉> 
+; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToH:reloading ()
+; :reloading ()
+; elper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.Res:reloading ()
+; :reloading ()
+; tFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent
+(matching-part {:name "left-hand" :size 3})
+
+{:name "righst-hand", :size 3}
+clj꞉hobbit-violence.core꞉> 
+; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToH:reloading ()
+; :reloading ()
+; elper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.Res:reloading ()
+; :reloading ()
+; tFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent:reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; .java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut:reloading :reloading ((hobbit-violence.corehobbit-violence.core))
+; 
+; or.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process:reloading (hobbit-violence.core)
+; _handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.uti:reloading (hobbit-violence.core)
+; l.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.c:reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; ore$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn:reloading ()
+; :reloading ()
+; .applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base:reloading ()
+; :reloading ()
+; /java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at us:reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; er$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(co:reloading ()
+; :reloading ()
+; re.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at c:reloading ()
+; lojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679:reloading ()
+; .invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.Threa
+(hobbit-violence.core/-main)
+
+[{:name "head", :size 3}
+ {:name "left-eye", :size 1}
+ {:name "right-eye", :size 1}
+ {:name "left-ear", :size 1}
+ {:name "right-ear", :size 1}
+ {:name "mouth", :size 1}
+ {:name "nose", :size 1}
+ {:name "neck", :size 2}
+ {:name "left-shoulder", :size 3}
+ {:name "right-shoulder", :size 3}
+ {:name "right-upper-arm", :size 3}
+ {:name "left-upper-arm", :size 3}
+ {:name "chest", :size 10}
+ {:name "back", :size 10}
+ {:name "left-forearm", :size 3}
+ {:name "right-forearm", :size 3}
+ {:name "abdomen", :size 6}
+ {:name "left-kidney", :size 1}
+ {:name "right-kidney", :size 1}
+ {:name "left-hand", :size 2}
+ {:name "right-hand", :size 2}
+ {:name "right-knee", :size 2}
+ {:name "left-knee", :size 2}
+ {:name "right-thigh", :size 4}
+ {:name "left-thigh", :size 4}
+ {:name "right-lower-leg", :size 3}
+ {:name "left-lower-leg", :size 3}
+ {:name "right-achilles", :size 1}
+ {:name "left-achilles", :size 1}
+ {:name "right-foot", :size 2}
+ {:name "left-foot", :size 2}]
+clj꞉hobbit-violence.core꞉> 
+ ; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToH:reloading ()
+; :reloading ()
+; elper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.Res:reloading ()
+; :reloading ()
+; tFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent:reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; .java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut:reloading ()
+; :reloading ()
+; or.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process
+(hobbit-violence.core/-main)
+
+[{:name "head", :size 3}
+ {:name "left-eye", :size 1}
+ {:name "right-eye", :size 1}
+ {:name "left-ear", :size 1}
+ {:name "right-ear", :size 1}
+ {:name "mouth", :size 1}
+ {:name "nose", :size 1}
+ {:name "neck", :size 2}
+ {:name "left-shoulder", :size 3}
+ {:name "right-shoulder", :size 3}
+ {:name "right-upper-arm", :size 3}
+ {:name "left-upper-arm", :size 3}
+ {:name "chest", :size 10}
+ {:name "back", :size 10}
+ {:name "left-forearm", :size 3}
+ {:name "right-forearm", :size 3}
+ {:name "abdomen", :size 6}
+ {:name "left-kidney", :size 1}
+ {:name "right-kidney", :size 1}
+ {:name "left-hand", :size 2}
+ {:name "right-hand", :size 2}
+ {:name "right-knee", :size 2}
+ {:name "left-knee", :size 2}
+ {:name "right-thigh", :size 4}
+ {:name "left-thigh", :size 4}
+ {:name "right-lower-leg", :size 3}
+ {:name "left-lower-leg", :size 3}
+ {:name "right-achilles", :size 1}
+ {:name "left-achilles", :size 1}
+ {:name "right-foot", :size 2}
+ {:name "left-foot", :size 2}]
+clj꞉hobbit-violence.core꞉> 
+; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToH:reloading ()
+; :reloading ()
+; elper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.Res:reloading ()
+; :reloading ()
+; tFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent:reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; .java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut:reloading ()
+; :reloading ()
+; or.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process:reloading ()
+; :reloading ()
+; _handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.c:reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; ore$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn:reloading ()
+; :reloading ()
+; .applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base:reloading ()
+; :reloading ()
+; /java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at u
+(hobbit-violence.core/-main)
+
+{:name "left-upper-arm", :size 3}
+clj꞉hobbit-violence.core꞉> 
+(hobbit-violence.core/-main)
+{:name "left-forearm", :size 3}
+clj꞉hobbit-violence.core꞉> 
+ (require 'user :reload)'
+; Syntax error reading source at (REPL:2058:1).
+; EOF while reading
+clj꞉hobbit-violence.core꞉> 
+(require 'user :reload)
+nil
+clj꞉hobbit-violence.core꞉> 
+; :reloading (user hobbit-violence.core)
+; :reloading (user hobbit-violence.core)
+; :reloading (user hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToH:reloading ()
+; :reloading ()
+; :reloading ()
+; elper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.Res:reloading ()
+; :reloading ()
+; :reloading ()
+; tFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent
+(hobbit-violence.core/-main)
+
+{:name "mouth", :size 1}
+clj꞉hobbit-violence.core꞉> 
+; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; :reloading (hobbit-violence.core)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToH:reloading ()
+; :reloading ()
+; :reloading ()
+; :reloading ()
+; elper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.Res:reloading ()
+; :reloading ()
+; :reloading ()
+; :reloading ()
+; tFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__12231.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent.java:114)
+; 	at clojure.lang.Agent$Action.run(Agent.java:163)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; java.lang.IllegalStateException: Can't change/establish root binding of: *ns* with set
+; 	at clojure.lang.Var.set(Var.java:226)
+; 	at clojure.lang.RT$1.invoke(RT.java:244)
+; 	at clojure.tools.namespace.repl$do_refresh.invokeStatic(repl.clj:95)
+; 	at clojure.tools.namespace.repl$do_refresh.invoke(repl.clj:83)
+; 	at clojure.tools.namespace.repl$refresh.invokeStatic(repl.clj:145)
+; 	at clojure.tools.namespace.repl$refresh.doInvoke(repl.clj:128)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:397)
+; 	at user$start_watcher$fn__1752.invoke(user.clj:7)
+; 	at hawk.core$process_handler$fn__1679.invoke(core.clj:41)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.AFn.applyTo(AFn.java:144)
+; 	at clojure.core$apply.invokeStatic(core.clj:667)
+; 	at clojure.core$apply.invoke(core.clj:662)
+; 	at hawk.core$catch_errors$fn__1652.doInvoke(core.clj:8)
+; 	at clojure.lang.RestFn.invoke(RestFn.java:421)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2053)
+; 	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+; 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+; 	at clojure.lang.Agent$Action.doRun(Agent
